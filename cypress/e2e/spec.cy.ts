@@ -2,12 +2,13 @@ describe("User should be able to", () => {
   it("view current location", () => {
     cy.visit("/", {
       onBeforeLoad(win) {
-        cy.stub(win.navigator.geolocation, "watchPosition").callsFake(
+        cy.stub(win.navigator.geolocation, "getCurrentPosition").callsFake(
           (successCallback) => {
             successCallback({
               coords: {
                 latitude: 60.391, // Example latitude
                 longitude: 5.325, // Example longitude
+                accuracy: 0.9,
               },
             });
           }
