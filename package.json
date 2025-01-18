@@ -7,7 +7,7 @@
     "test:e2e": "start-server-and-test 'vite --host' http://localhost:5173 cy:open",
     "test:chrome": "start-server-and-test 'vite --host' http://localhost:5173 e2e:chrome",
     "cy:open": "cypress open",
-    "e2e:chrome": "cypress run --browser chrome"
+    "e2e:chrome": "cypress run --browser chrome",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
