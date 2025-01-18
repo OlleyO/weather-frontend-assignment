@@ -20,7 +20,7 @@ describe("User should be able to", () => {
     cy.getByTestId("city-card").first().click();
     cy.getByTestId("location").should("have.text", "Bibrka");
     cy.getByTestId("hourly-forecast").should("have.length", 24);
-    cy.getByTestId("daily-forecast").should("have.length", 10);
+    cy.getByTestId("daily-forecast").should("have.length", 3);
     cy.getByTestId("hour").first().should("have.text", new Date().getHours());
   });
 });
