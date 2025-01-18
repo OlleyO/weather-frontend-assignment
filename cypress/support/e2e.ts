@@ -15,3 +15,16 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+import dayjs = require('dayjs');
+import isToday = require("dayjs/plugin/isToday");
+import weekDay = require ("dayjs/plugin/weekday");
+import utc = require( "dayjs/plugin/utc");
+import timezone = require("dayjs/plugin/timezone");
+
+dayjs.extend(weekDay);
+dayjs.extend(isToday);
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+Cypress.dayjs = dayjs

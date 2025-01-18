@@ -22,6 +22,6 @@ describe("User should be able to", () => {
     cy.getByTestId("location").should("have.text", "Bibrka");
     cy.getByTestId("hourly-forecast").should("have.length", 24);
     cy.getByTestId("daily-forecast").should("have.length", 3);
-    cy.getByTestId("hour").first().should("have.text", new Date().getHours());
+    cy.getByTestId("hour").first().should("have.text", Cypress.dayjs().tz('Europe/Kiev').hour());
   });
 });
